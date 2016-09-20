@@ -1,0 +1,83 @@
+.menu {
+      background: #ea15ea;
+      padding: 13px;
+  li {
+    display: inline-block;
+    a {
+      border-radius: 7px;
+      padding: 10px 20px;
+      background: #ea15ea;
+      text-decoration: none;
+      color: #1515ea;
+    }
+    a:hover {
+      background: #ff007f;
+    }
+  }
+}
+.body_home {
+  background: asset_url('33.jpg');
+}
+.title_login, .title_sign_up, .title_forgot {
+  text-align: center;
+}
+.form {
+  text-align: center;
+}
+.email, .password, .confirm_password {
+  width: 250px !important;
+  display: inline-block !important;
+}
+.field {
+  padding: 10px;
+}
+.btn_sign_up, .btn_login, .btn_reset_pass {
+  padding: 4px 22px;
+  border-radius: 17px;
+  background: #20eaea;
+}
+.email_header, .password_header {
+  width: 200px !important;
+  display: inline-block !important;
+  height: 25px !important;
+}
+.btn_login_header {
+  padding: 2px 25px;
+  border-radius: 17px;
+  background: #20eaea;
+}
+span.title {
+    float: right;
+    margin-right: 110px;
+}
+a.profile {
+    margin-top: 12px;
+    margin-left: 10px;
+    float: right;
+}
+.form_header {
+  padding-right: 130px;
+}
+.inline {
+  display: inline-flex;
+  margin-top: 3px;
+}
+
+.input-group {
+  width: 250px;
+}
+.inline {
+  label {
+    margin-right: 5px;
+    margin-top: 5px;
+  }
+}
+
+span.input-group-addon {
+    padding: 4px 13px ;
+}
+
+input.btn_login_header {
+    position: relative;
+    top: -5px;
+}

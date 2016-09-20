@@ -1,0 +1,42 @@
+.col-lg-6
+  = image_tag('logo.jpg')
+.col-lg-6.form_header
+  = form_for @user , url: '/users/sign_in', method: 'post'  do |f|
+    - if !user_signed_in?
+      span.title
+        | Are you have Account? if no please click to
+        = link_to new_user_registration_path
+          | &nbsp; Register
+      br
+      .inline
+        = f.label 'User'
+        span.input-group
+          span.input-group-addon
+            span.glyphicon.glyphicon-user
+          = f.text_field :email , class: 'form-control email_header', placeholder: 'Email'
+        = f.label 'Password'
+        span.input-group
+          span.input-group-addon
+            span.glyphicon.glyphicon-asterisk
+          = f.password_field :password, class: 'form-control password_header', placeholder: 'Password'
+        = f.submit 'Login' ,class:'btn_login_header'
+    - else
+        = link_to destroy_user_session_path, method: 'delete', class: 'profile'
+          span.glyphicon.glyphicon-log-out
+        = link_to root_path, class: 'profile'
+          = current_user.email
+
+.col-lg-12
+  ul.menu
+    li
+      = link_to root_path
+        | Home
+    li
+      a[href="#"]
+        | Ao
+    li
+      a[href="#"]
+        | Quan
+    li
+      a[href="#"]
+        | Giay
