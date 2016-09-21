@@ -81,3 +81,64 @@ input.btn_login_header {
     position: relative;
     top: -5px;
 }
+
+.menu-left {
+  width: 248px;
+  a {
+    color: #000;
+    padding: 10px;
+    text-decoration: none;
+    float: left;
+    clear: both;
+    padding: 10px 180px 10px 14px;
+    background: aliceblue;
+    white-space: nowrap;
+  }
+  a:hover {
+    background: #ff007f;
+    text-decoration: none;
+  }
+  ul {
+    height: 100%;
+    list-style: none;
+    overflow: hidden;
+  }
+  li {
+    position: relative;
+    top: 10px;
+    left: -11px;
+  }
+}
+.categories {
+  background: bisque;
+  padding: 9px 11px;
+}
+.categori {
+  margin-left: 13px;
+}
+.glyphicon-home:before, .glyphicon-cog:before {
+  margin-right: 5px;
+}
+
+span.glyphicon.glyphicon-cog {
+    word-spacing: -10px;
+}
+
+.avertise {
+  img {
+    width: 1115px;
+  }
+}
+.line {
+  height: 2px;
+  width: 100%;
+  background: red;
+  float: right;
+}
+
+button.view-most {
+    border: none;
+    background: red;
+    padding: 8px 45px;
+    border-radius: 13px;
+}

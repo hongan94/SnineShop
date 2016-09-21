@@ -7,6 +7,14 @@ html
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags
   body.body_home
-    = render 'layouts/header'
     .col-lg-12
-      = yield
+      = render 'layouts/header'
+    .col-lg-2
+      = render 'layouts/menu_left'
+    .col-lg-10
+      - if action_name == 'index'
+        = render 'layouts/paner'
+      - else
+        = yield
+  - if action_name == 'index'
+    = yield
