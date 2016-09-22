@@ -1,0 +1,31 @@
+- if flash[:notice]
+  = flash[:notice]
+- if flash[:danger]
+  = flash[:danger]
+h1.title_sale
+  | Manager Categories
+.add_edit
+  = link_to new_category_path
+    span.glyphicon.glyphicon-plus
+    | Add
+table.table.table-bordered
+    tr
+      th
+        | Id
+      th
+        | Name
+      th.action
+        | Action
+    - @categories.each do |f|
+      tr
+        td
+          = f.id
+        td
+          = f.name
+        td
+          = link_to
+            span.glyphicon.glyphicon-pencil
+            | Edit
+          = link_to category_path(f.id), method: 'delete', class: 'icon-delete', data: { confirm: 'Are you certain you want to delete this?' }
+            span.glyphicon.glyphicon-remove
+            | Delete

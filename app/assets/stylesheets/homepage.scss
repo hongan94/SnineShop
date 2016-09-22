@@ -86,13 +86,13 @@ input.btn_login_header {
   width: 248px;
   a {
     color: #000;
-    padding: 10px;
     text-decoration: none;
     float: left;
     clear: both;
     padding: 10px 180px 10px 14px;
-    background: aliceblue;
     white-space: nowrap;
+    margin-left: 11px;
+    margin-bottom: 10px;
   }
   a:hover {
     background: #ff007f;
@@ -102,6 +102,8 @@ input.btn_login_header {
     height: 100%;
     list-style: none;
     overflow: hidden;
+    position: relative;
+    left: -26px;
   }
   li {
     position: relative;
@@ -141,4 +143,8 @@ button.view-most {
     background: red;
     padding: 8px 45px;
     border-radius: 13px;
+}
+
+.col-lg-10.body_content {
+    padding-right: 30px;
 }

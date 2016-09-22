@@ -1,0 +1,62 @@
+.btn-add-categories {
+  padding: 4px 22px;
+  border-radius: 17px;
+  background: #20eaea;
+}
+.title_sale, .title-categories {
+  text-shadow: 2px 2px 5px red;
+  text-align: center;
+}
+.name-categories {
+  text-shadow: 2px 2px 5px red;
+  position: relative;
+  top: 30px;
+  left: 66px;
+}
+.glyphicon-plus:before, .glyphicon-pencil:before, .glyphicon-remove:before {
+  color: red;
+}
+.add_edit {
+  float: right;
+}
+
+input#category_name {
+  width: 200px;
+  text-align: center;
+  margin-top: 50px;
+  margin-left: 65px;
+}
+input.form-control.btn-add-categories {
+  width: 133px;
+  border-radius: 21px;
+  background: aqua;
+  position: relative;
+  bottom: -48px;
+  left: 30px;
+}
+form#new_category {
+  display: inline-flex;
+}
+.list-categories {
+  margin-top: 30px;
+}
+
+.back {
+  margin-left: 52px;
+  color: blue;
+}
+.icon-delete {
+    margin-left: 8px;
+}
+th.action {
+  width: 120px;
+  text-align: center;
+}
+#marq {
+  text-shadow: 0 0 3px #FF0000;
+  margin-top: 10px;
+}
+.title-mar {
+  background: bisque;
+  margin-bottom: 25px;
+}
