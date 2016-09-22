@@ -3,7 +3,7 @@
     .categories
       span.glyphicon.glyphicon-th
       span.categori
-        | Categories
+        | Manager Categories
     - Category.all.each do |f|
         li
           = link_to category_path(f.id)

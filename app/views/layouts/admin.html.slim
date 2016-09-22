@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title
+      | ShopSine
+    = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+    = javascript_include_tag 'application', 'data-turbolinks-track' => true
+    = csrf_meta_tags
+  body.body_home
+    .col-lg-12
+      = render 'layouts/header_admin'
+    .col-lg-2
+      = render 'layouts/menu_left_admin'
+    .col-lg-10.body_content
+        = yield

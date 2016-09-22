@@ -1,0 +1,29 @@
+= flash[:notice]
+.back.col-lg-12
+  = link_to '', onclick: 'goback(); return false'
+    h3.glyphicon.glyphicon-arrow-left
+      | Back
+h3.title-categories.col-lg-12
+  | Import Categories You Want Add
+.col-lg-5
+  span.name-categories
+    | Name Categories
+  = form_for @category do |f|
+    = f.text_field :name, class:'form-control'
+    = f.submit class: 'form-control btn-add-categories'
+.col-lg-7.list-categories
+  span.title-categories
+    | List Categories
+  table.table.table-bordered
+    tr
+      th
+        | Id
+      th
+        | Name
+    - @categories.each do |f|
+      tr
+        td
+          = f.id
+        td
+          = f.name
+
