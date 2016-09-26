@@ -1,4 +1,5 @@
 class Admin::ConfirmationsController < Devise::ConfirmationsController
+    layout 'login_logout'
   # GET /resource/confirmation/new
   # def new
   #   super

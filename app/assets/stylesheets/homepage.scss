@@ -1,12 +1,12 @@
 .menu {
-      background: #ea15ea;
+      background: bisque;
       padding: 13px;
   li {
     display: inline-block;
     a {
       border-radius: 7px;
       padding: 10px 20px;
-      background: #ea15ea;
+      background: bisque;
       text-decoration: none;
       color: #1515ea;
     }
@@ -16,7 +16,7 @@
   }
 }
 .body_home {
-  background: asset_url('33.jpg');
+  /*background: asset_url('33.jpg');*/
 }
 .title_login, .title_sign_up, .title_forgot {
   text-align: center;
@@ -147,4 +147,8 @@ button.view-most {
 
 .col-lg-10.body_content {
     padding-right: 30px;
+}
+
+input#user_email {
+  margin-bottom: -1px;
 }

@@ -4,11 +4,11 @@
   background: #20eaea;
 }
 .title_sale, .title-categories {
-  text-shadow: 2px 2px 5px red;
+/*  text-shadow: 2px 2px 5px red;*/
   text-align: center;
 }
 .name-categories {
-  text-shadow: 2px 2px 5px red;
+/*  text-shadow: 2px 2px 5px red;*/
   position: relative;
   top: 30px;
   left: 66px;
@@ -22,7 +22,6 @@
 
 input#category_name {
   width: 200px;
-  text-align: center;
   margin-top: 50px;
   margin-left: 65px;
 }
@@ -59,4 +58,27 @@ th.action {
 .title-mar {
   background: bisque;
   margin-bottom: 25px;
+}
+
+.search {
+  display: inline-flex;
+}
+
+.field-search {
+  height: 26px;
+}
+
+button.btn-search {
+  padding: 0px 13px 0px 10px;
+  background: #fff;
+  position: relative;
+  left: 0px;
+  border: none;
+  border-radius: 6px;
+}
+
+span.group-search {
+    float: right;
+    position: relative;
+    bottom: 7px;
 }

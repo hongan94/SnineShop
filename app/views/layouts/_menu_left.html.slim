@@ -1,11 +1,18 @@
 .menu-left.sidebar
-  ul
+  ul.menu_style
     .categories
       span.glyphicon.glyphicon-th
       span.categori
         | Categories
     - Category.all.each do |f|
-        li
-          = link_to category_path(f.id)
+        li.caterogy
+          = link_to '' , class: "parent_category" , id: "category#{f.id}", remote: true
             span.glyphicon.glyphicon-cog
               = f.name
+            span.glyphicon.glyphicon-menu-down
+          ul[class= "category#{f.id} hide"]
+             - f.products.each do |k|
+               li
+                 = link_to products_path
+                   = k.name
+
