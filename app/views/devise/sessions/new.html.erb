@@ -20,6 +20,7 @@
     <%= f.submit "Log in" , class: 'btn_login' %>
   </div>
 <% end %>
+  <% if action_name != 'admin/sessions' %>
   <%= render "devise/shared/links" %>
-
+  <% end %>
 </div>

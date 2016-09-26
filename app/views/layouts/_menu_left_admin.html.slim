@@ -1,11 +1,19 @@
-.menu-left.sidebar
-  ul
-    .categories
-      span.glyphicon.glyphicon-th
-      span.categori
-        | Manager Categories
-    - Category.all.each do |f|
-        li
-          = link_to category_path(f.id)
-            span.glyphicon.glyphicon-cog
-              = f.name
+-unless current_admin.nil?
+  .menu-left.sidebar
+    ul
+      .categories
+        span.glyphicon.glyphicon-th
+        span.categori
+          | List Manager
+          li
+            = link_to
+              span.glyphicon.glyphicon-cog
+                | Manager Categories
+          li
+            = link_to products_path
+              span.glyphicon.glyphicon-cog
+                | Manager Product
+          li
+            = link_to
+              span.glyphicon.glyphicon-cog
+                | Manager Sub-product

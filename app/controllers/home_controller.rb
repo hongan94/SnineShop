@@ -8,4 +8,5 @@ class HomeController < ApplicationController
   def user_new
     @user = User.new
   end
+
 end

@@ -1,0 +1,49 @@
+input#product_name {
+    width: 200px;
+    width: 200px;
+    margin-top: 31px;
+    margin-left: 65px;
+}
+label.lbl-categories {
+  margin-left: 65px;
+  margin-bottom: 21px;
+  position: relative;
+  top: -27px;
+}
+.btn-add-product {
+  padding: 4px 22px;
+  border-radius: 17px;
+  background: #20eaea;
+}
+input.form-control.btn-add-product {
+  width: 133px;
+  border-radius: 21px;
+  background: aqua;
+  position: relative;
+  bottom: -48px;
+  left: 30px;
+  position: relative;
+  top: -34px;
+  left: 281px;
+}
+
+select#product_category_id {
+  border: 1px solid #ccc;
+  padding: 10px 45px 8px 32px;
+  background: #fff;
+  margin-left: 65px;
+  border-radius: 5px;
+  position: relative;
+  top: -26px;
+}
+
+.glyphicon-menu-down:before {
+    margin-left: 59px;
+}
+
+ul.menu_style {
+    margin-left: 40px;
+    padding-left: 0px;
+    padding-bottom: 20px;
+    background: bisque;
+}
