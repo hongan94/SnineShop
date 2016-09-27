@@ -9,10 +9,14 @@
           = link_to '' , class: "parent_category" , id: "category#{f.id}", remote: true
             span.glyphicon.glyphicon-cog
               = f.name
-            span.glyphicon.glyphicon-menu-down
           ul[class= "category#{f.id} hide"]
              - f.products.each do |k|
                li
-                 = link_to products_path
+                 = link_to '' , class: "parent_product", id: "product#{k.id}", remote: true
                    = k.name
+                 ul[class= "product#{k.id} hide"]
+                    - k.sub_product.each do |l|
+                      li
+                        = link_to ''
+                          = l.name
 

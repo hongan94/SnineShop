@@ -1,3 +1,40 @@
-// Place all the styles related to the sub_products controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+input#sub_product_name {
+  width: 200px;
+}
+.col-lg-5.group-add-sub-product {
+    padding-left: 72px;
+}
+input.add-sub-product {
+    background: aqua;
+    border-radius: 8px;
+    padding: 3px 5px;
+    margin-top: 15px;
+}
+
+input#sub_product_price {
+    width: 200px;
+}
+input#sub_product_quantity {
+  width: 200px;
+}
+input#sub_product_image {
+    margin-bottom: 15px;
+}
+.lbl-product {
+  margin-right: 10px;
+}
+td.detail_product {
+  float: left;
+  width: 20%;
+  text-align: center ;
+  img {
+    width: 230px;
+    height: 260px;
+  }
+}
+.price {
+  color: red;
+}
+.quantity {
+  color: blue;
+}

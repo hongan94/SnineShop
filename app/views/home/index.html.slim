@@ -4,8 +4,17 @@
   .line
      table.table.table-bordered
       tr
-        td
-        td
-        td
-        td
-        td
+      - @sub_product.each do |f|
+        td.detail_product
+          = image_tag(f.image)
+          = f.name
+          br
+          span.price
+            | Price:
+            = f.price
+            span
+              | $
+          br
+          span.quantity
+            | Quantity:
+            = f.quantity

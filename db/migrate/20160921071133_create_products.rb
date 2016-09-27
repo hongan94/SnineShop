@@ -7,8 +7,8 @@ class CreateProducts < ActiveRecord::Migration
       t.integer :quantity
       t.string :detail
       t.string :origin
-      t.string :status
-      t.string :discount
+      t.boolean :status
+      t.integer :discount
       t.timestamps null: false
     end
   end

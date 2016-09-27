@@ -1,5 +1,3 @@
-$(function(){
-  function goBack() {
-    window.history.back();
-}
-});
+ function goback() {
+    window.history.go(-1);
+  }
