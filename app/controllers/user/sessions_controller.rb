@@ -4,7 +4,7 @@ class User::SessionsController < Devise::SessionsController
   # def new
   #   super
   # end
-
+  layout 'login_logout'
   # POST /resource/sign_in
   def create
     @user = User.find_by(email: params[:email])
