@@ -318,7 +318,6 @@ input#user_email {
 /* line 158, /home/hongan/Rails/ShopSine/app/assets/stylesheets/homepage.scss */
 form#new_user {
   zoom: 70%;
-  float: right;
 }
 /* line 1, /home/hongan/Rails/ShopSine/app/assets/stylesheets/products.scss */
 input#product_name {
