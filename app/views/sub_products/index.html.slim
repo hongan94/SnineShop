@@ -4,9 +4,9 @@
   - if flash[:danger]
     = flash[:danger]
   h1.title_sale
-    | Manager Product
+    | Manager Sub-Product
   .add_edit
-    = link_to new_product_path
+    = link_to new_sub_product_path
       span.glyphicon.glyphicon-plus
       | Add
   table.table.table-bordered
@@ -17,7 +17,7 @@
           | Name
         th.action
           | Action
-      - @products.each do |f|
+      - @sub_products.each do |f|
         tr
           td
             = f.id

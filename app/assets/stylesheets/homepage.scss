@@ -83,13 +83,15 @@ input.btn_login_header {
 }
 
 .menu-left {
-  width: 248px;
+  background: bisque;
+  margin-left: 0px;
+  width: 121%;
   a {
     color: #000;
     text-decoration: none;
     float: left;
     clear: both;
-    padding: 10px 180px 10px 14px;
+    padding: 10px 46px 10px 8px;
     white-space: nowrap;
     margin-left: 11px;
     margin-bottom: 10px;
@@ -108,7 +110,6 @@ input.btn_login_header {
   li {
     position: relative;
     top: 10px;
-    left: -11px;
   }
 }
 .categories {
@@ -128,7 +129,8 @@ span.glyphicon.glyphicon-cog {
 
 .avertise {
   img {
-    width: 1115px;
+    width: 100%;
+    margin-left: 10px;
   }
 }
 .line {
@@ -151,4 +153,9 @@ button.view-most {
 
 input#user_email {
   margin-bottom: -1px;
+}
+
+form#new_user {
+    zoom: 70%;
+    float: right;
 }
