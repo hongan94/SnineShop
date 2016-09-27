@@ -8,14 +8,16 @@ class User::SessionsController < Devise::SessionsController
   # POST /resource/sign_in
   def create
     @user = User.find_by(email: params[:email])
-    sign_in @user
-    redirect_to root_path
+    if @user
+      sign_in @user
+      redirect_to root_path
+    end
+    redirect_to new_user_session_path
   end
 
 
   def destroy
-    @user = User.find(params[:id])
-    sign_out @user
+    sign_out current_user
     redirect_to root_path
   end
 
