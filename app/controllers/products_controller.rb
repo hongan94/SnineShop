@@ -11,11 +11,15 @@ class ProductsController < ApplicationController
     @products = Product.all
   end
 
+  def show
+    @products = Product.all
+  end
+
   def create
     flash[:notice] = "You has create Successfully"
     @product =  Product.new(params_product)
     if @product.save
-      redirect_to new_product_path
+      redirect_to new_admin_product_path
     else
       render 'new'
     end
@@ -31,7 +35,7 @@ class ProductsController < ApplicationController
     @product.update(params_product)
     if @product.save
       flash[:notice] = 'Product was successsfully updated !'
-      redirect_to new_product_path
+      redirect_to new_admin_product_path(current_admin)
     else
       render 'create'
     end
@@ -44,7 +48,7 @@ class ProductsController < ApplicationController
     else
       flash[:danger] ="Delete Error"
     end
-    redirect_to products_path
+    redirect_to admin_products_path
   end
 
   private

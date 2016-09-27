@@ -12,7 +12,7 @@ class Admin::SessionsController < Devise::SessionsController
   def create
     @admin = Admin.find_by(email: params[:admin][:email])
     sign_in @admin
-    redirect_to categories_path
+    redirect_to admin_categories_path(current_admin)
   end
 
   def destroy

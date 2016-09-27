@@ -5,6 +5,10 @@ class HomeController < ApplicationController
     @sub_product = SubProduct.all
   end
 
+  def detail_product
+    @sub_product = SubProduct.find(params[:id])
+  end
+
   private
   def user_new
     @user = User.new

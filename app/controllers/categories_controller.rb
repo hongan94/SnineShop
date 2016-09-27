@@ -6,6 +6,10 @@ class CategoriesController < ApplicationController
     @categories = Category.all
   end
 
+  def show
+     @categories = Category.all
+  end
+
   def new
     @category = Category.new
     @categories = Category.all
@@ -15,7 +19,7 @@ class CategoriesController < ApplicationController
     flash[:notice] = "You has create Successfully"
     @category =  Category.new(params_category)
     if @category.save
-      redirect_to new_category_path
+      redirect_to new_admin_category_path
     else
       render 'new'
     end
@@ -31,7 +35,7 @@ class CategoriesController < ApplicationController
     @category.update(params_category)
     if @category.save
       flash[:notice] = 'Categories was successsfully updated !'
-      redirect_to new_category_path
+      redirect_to new_admin_category_path
     else
       render 'create'
     end
@@ -44,7 +48,7 @@ class CategoriesController < ApplicationController
     else
       flash[:danger] ="Delete Error"
     end
-    redirect_to categories_path
+    redirect_to admin_categories_path
   end
 
   private

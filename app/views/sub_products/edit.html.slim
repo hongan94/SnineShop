@@ -9,7 +9,7 @@ h3.title-categories.col-lg-12
 .col-lg-5.group-add-sub-product
   span.name-sub-product
     | Name
-  = form_for @sub_product, method: 'post', url: admin_sub_products_path(current_admin) do |f|
+  = form_for @sub_product, class:'form_sub_product', html: { multipart: true }, url: admin_sub_product_path(current_admin, @sub_product) do |f|
     = f.text_field :name, class:'form-control'
     = f.label :Price
     = f.text_field :price, class:'form-control'

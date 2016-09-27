@@ -1,4 +1,5 @@
-= flash[:notice]
+.notice
+  = flash[:notice]
 .back.col-lg-12
   = link_to '', onclick: 'goback(); return false'
     h3.glyphicon.glyphicon-arrow-left
@@ -8,7 +9,7 @@ h3.title-categories.col-lg-12
 .col-lg-5.group-add-product
   span.name-categories
     | Name Product
-  = form_for @product do |f|
+  = form_for @product , url: admin_products_path(current_admin) do |f|
     = f.text_field :name, class:'form-control'
     = f.submit class: 'form-control btn-add-product'
     = f.label :Category, class: 'lbl-categories'

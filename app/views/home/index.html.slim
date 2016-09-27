@@ -6,7 +6,8 @@
       tr
       - @sub_product.each do |f|
         td.detail_product
-          = image_tag(f.image)
+          = link_to new_admin_sub_product_path(f)
+            = image_tag(f.image)
           = f.name
           br
           span.price
@@ -18,3 +19,12 @@
           span.quantity
             | Quantity:
             = f.quantity
+          br
+          span.glyphicon.glyphicon-star
+          span.glyphicon.glyphicon-star
+          span.glyphicon.glyphicon-star
+          span.glyphicon.glyphicon-star
+          span.glyphicon.glyphicon-star
+          br
+          button.buy
+            | BUY

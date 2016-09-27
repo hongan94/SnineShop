@@ -2,9 +2,11 @@ Rails.application.routes.draw do
 
   devise_for :users, controllers: { sessions: 'user/sessions'}
   devise_for :admins, controllers: { sessions: 'admin/sessions' }
-  resources :categories, controller: 'categories'
-  resources :products
-  resources :sub_products
+  resources :admins do
+      resources :categories, controller: 'categories'
+      resources :products
+      resources :sub_products
+  end
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
