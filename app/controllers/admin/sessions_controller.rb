@@ -2,6 +2,7 @@ class Admin::SessionsController < Devise::SessionsController
 # before_action :configure_sign_in_params, only: [:create]
   layout 'login_logout'
   # GET /resource/sign_in
+  skip_before_filter :require_no_authentication
   def new
     @user = User.new
     @admin = Admin.new
@@ -15,9 +16,8 @@ class Admin::SessionsController < Devise::SessionsController
   end
 
   def destroy
-    @admin = Admin.find(params[:admin][:id])
-    sign_out @admin
-    redirect_to categories_path
+    sign_out current_admin
+    redirect_to new_admin_session_path
   end
   # DELETE /resource/sign_out
   # def destroy
