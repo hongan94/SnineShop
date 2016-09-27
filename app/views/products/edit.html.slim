@@ -23,15 +23,10 @@ h3.title-categories.col-lg-12
         | Id
       th
         | Name
-      th
-        | Parent
     - @products.each do |f|
       tr
         td
           = f.id
         td
           = f.name
-        td
-          - if !f.category.nil?
-            = f.category.name
 

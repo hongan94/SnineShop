@@ -21,6 +21,22 @@ class CategoriesController < ApplicationController
     end
   end
 
+  def edit
+    @category = Category.find(params[:id])
+    @categories = Category.all
+  end
+
+  def update
+    @category = Category.find(params[:id])
+    @category.update(params_category)
+    if @category.save
+      flash[:notice] = 'Categories was successsfully updated !'
+      redirect_to new_category_path
+    else
+      render 'create'
+    end
+  end
+
   def destroy
     @category = Category.find(params[:id])
     if @category.destroy

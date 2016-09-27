@@ -24,7 +24,7 @@
           td
             = f.name
           td
-            = link_to
+            = link_to edit_category_path(f)
               span.glyphicon.glyphicon-pencil
               | Edit
             = link_to category_path(f.id), method: 'delete', class: 'icon-delete', data: { confirm: 'Are you certain you want to delete this?' }

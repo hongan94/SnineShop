@@ -4,34 +4,26 @@
     h3.glyphicon.glyphicon-arrow-left
       | Back
 h3.title-categories.col-lg-12
-  | Import Product
-.col-lg-5.group-add-product
+  | Import Categories You Want Add
+.col-lg-5
   span.name-categories
-    | Name Product
-  = form_for @product do |f|
+    | Name Categories
+  = form_for @category do |f|
     = f.text_field :name, class:'form-control'
-    = f.submit class: 'form-control btn-add-product'
-    = f.label :Category, class: 'lbl-categories'
-    br
-    = f.select(:category_id, Category.all.collect {|p| [ p.name, p.id ] })
+    = f.submit class: 'form-control btn-add-categories'
 .col-lg-7.list-categories
   span.title-categories
-    | List Product
+    | List Categories
   table.table.table-bordered
     tr
       th
         | Id
       th
         | Name
-      th
-        | Parent
-    - @products.each do |f|
+    - @categories.each do |f|
       tr
         td
           = f.id
         td
           = f.name
-        td
-          - if !f.category.nil?
-            = f.category.name
 
