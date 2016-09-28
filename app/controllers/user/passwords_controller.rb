@@ -1,4 +1,6 @@
 class User::PasswordsController < Devise::PasswordsController
+    layout 'login_logout'
+
   # GET /resource/password/new
   # def new
   #   super
