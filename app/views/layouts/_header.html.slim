@@ -28,7 +28,8 @@
 .col-lg-12.cart
   = link_to
     span.glyphicon.glyphicon-shopping-cart
-    = Cart.all.count
+    - if !Cart.all.count.nil?
+      = Cart.all.count
 .col-lg-12
   ul.menu
     li
