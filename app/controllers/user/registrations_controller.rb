@@ -3,17 +3,17 @@ class User::RegistrationsController < Devise::RegistrationsController
 # before_action :configure_account_update_params, only: [:update]
   # GET /resource/sign_up
    layout 'login_logout'
-  def new
-    @user = User.new
-  end
+  # def new
+  #   @user = User.new
+  # end
 
-  # POST /resource
-  def create
-    @user = User.new(user_params)
-    if @user.save
-      redirect_to root_path
-    end
-  end
+  # # POST /resource
+  # def create
+  #   @user = User.new(user_params)
+  #   if @user.save
+  #     redirect_to root_path
+  #   end
+  # end
 
   # GET /resource/edit
   # def edit

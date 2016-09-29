@@ -1,0 +1,36 @@
+.sp
+  = @sub_product.name
+.detail-product.col-lg-12
+  .col-lg-3
+    = image_tag(@sub_product.image)
+  .col-lg-9.detail_sub
+    .status
+      | Status:
+      - if @sub_product.quantity > 0
+        span[style='color: red; margin-left: 10px;']
+          | Còn hàng
+      - else
+        span[style='color: red; margin-left: 10px;']
+        | Out Of Stock
+    .price_detail
+      | Price:
+      span[style='color: red; margin-left: 10px;']
+        = @sub_product.price
+        | &nbsp; VND
+    .size
+      | Size:
+      select
+        option[value='']
+          | --choose--
+        option[value = 'M']
+          | M
+        option[value = 'L']
+          | L
+        option[value = 'XL']
+          | XL
+    .quantity_detail
+      | Quantity:
+      input[class='input_quantity']
+    = link_to cart_path(@sub_product), class: 'buy'
+        span.glyphicon.glyphicon-shopping-cart
+        | Add to Cart

@@ -1,0 +1,2 @@
+module SubProduct::ProductHelper
+end

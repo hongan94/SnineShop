@@ -12,11 +12,18 @@
           ul[class= "category#{f.id} hide"]
              - f.products.each do |k|
                li
-                 = link_to '' , class: "parent_product", id: "product#{k.id}", remote: true
-                   = k.name
-                 ul[class= "product#{k.id} hide"]
-                    - k.sub_product.each do |l|
-                      li
-                        = link_to ''
-                          = l.name
+                 = link_to sub_product_path(k) , class: "parent_product", id: "product#{k.id}"
+                  span.glyphicon.glyphicon-certificate
+                    = k.name
 
+javascript:
+   $(function(){
+    $('.parent_category').click(function(){
+     var a =  $(this).attr('id');
+     $('.'+a+'').toggleClass('hide');
+    });
+    $('.parent_product').click(function(){
+      var b = $(this).attr('id');
+      $('.'+b+'').toggleClass('hide');
+    });
+  });

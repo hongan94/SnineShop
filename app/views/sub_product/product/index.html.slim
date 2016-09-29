@@ -1,10 +1,10 @@
 .container-fluid
   button.view-most
-    | Xem nhieu
+    = @product.name
   .line
      table.table.table-bordered
       tr
-      - @sub_product.each do |f|
+      - @sub_products.each do |f|
         td.detail_product
           = link_to sub_product_product_path(f)
             = image_tag(f.image)
