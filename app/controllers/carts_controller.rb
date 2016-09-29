@@ -1,27 +1,30 @@
 class CartsController < ApplicationController
-before_action :prepare_sub_product, only: [:add, :remove]
 
   def show
-    @cart = current_cart
+    @cart = Cart.find(params[:id])
+    @cart_item = @cart.cart_items
     @user = User.new
   end
 
   def add
+    @sub_product = SubProduct.find(params[:cart_id])
+    if params[:quantity].to_i > 1
+        quantity = (params[:quantity]).to_i
+    else
+        quantity = 1
+    end
     @cart = Cart.create
-    @cart.add(@sub_product,@sub_product.price,@sub_product.quantity)
-    redirect_to cart_path
+    @cart.add(@sub_product,@sub_product.price,quantity)
+    redirect_to cart_path(@cart)
   end
 
   def remove
-    current_cart.remove_all(@sub_product)
-    redirect_to cart_path
+    @cart.remove_all(@sub_product)
+    redirect_to cart_path(@cart)
   end
 
   private
 
-  def prepare_sub_product
-    @sub_product = SubProduct.find(params[:id])
-  end
 end
 
 

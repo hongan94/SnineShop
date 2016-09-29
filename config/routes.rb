@@ -11,12 +11,10 @@ Rails.application.routes.draw do
     resources :product
     get ':id/product', to: 'product#index'
   end
-  resources :cart, only: :show do
-    collection do
+  resources :carts, only: :show do
       get :add
       get :remove
     end
-  end
   root 'home#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
