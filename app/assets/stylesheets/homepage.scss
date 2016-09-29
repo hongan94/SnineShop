@@ -83,9 +83,8 @@ input.btn_login_header {
 }
 
 .menu-left {
-  background: bisque;
-  margin-left: 0px;
-  width: 121%;
+  margin-left: -13px;
+  width: 134%;
   a {
     color: #000;
     text-decoration: none;
@@ -94,7 +93,7 @@ input.btn_login_header {
     padding: 10px 46px 10px 8px;
     white-space: nowrap;
     margin-left: 11px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
   }
   a:hover {
     background: #ff007f;
@@ -168,4 +167,31 @@ button.buy {
 }
 .glyphicon-star:before {
     color: yellow;
+}
+.glyphicon-eye-open:before {
+  color: saddlebrown;
+}
+span.view {
+    margin-left: 15px;
+    position: relative;
+    top: -2px;
+}
+
+.col-lg-9.detail_sub {
+    padding-left: 111px;
+    padding-top: 50px;
+}
+
+.status, .price_detail, .quantity_detail, .size {
+    margin-bottom: 10px;
+}
+
+input.input_quantity {
+  width: 60px;
+}
+span.glyphicon.glyphicon-certificate {
+  word-spacing: -10px;
+}
+.glyphicon-certificate:before {
+    color: brown;
 }

@@ -5,21 +5,15 @@ class User::SessionsController < Devise::SessionsController
   #   super
   # end
   layout 'login_logout'
-  # POST /resource/sign_in
-  def create
-    @user = User.find_by(email: params[:email])
-    if @user
-      sign_in @user
-      redirect_to root_path
-    end
-    redirect_to new_user_session_path
-  end
+  # # POST /resource/sign_in
+  # def create
+  #   super
+  # end
 
 
-  def destroy
-    sign_out current_user
-    redirect_to root_path
-  end
+  # def destroy
+  #  super
+  # end
 
   # protected
 

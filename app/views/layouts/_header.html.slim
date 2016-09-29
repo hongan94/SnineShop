@@ -25,6 +25,9 @@
           span.glyphicon.glyphicon-log-out
         = link_to root_path, class: 'profile'
           = current_user.email
+.col-lg-12.cart
+  = link_to cart_path
+    span.glyphicon.glyphicon-shopping-cart
 
 .col-lg-12
   ul.menu
